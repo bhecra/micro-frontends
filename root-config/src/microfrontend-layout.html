@@ -1,0 +1,34 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:  -->
+
+  <route path="/">
+    <application name="@bhecra/navbar" props="myProp"></application>
+  </route>
+  <!-- <route path="/angular">
+    <application name="@bhecra/angular-mf" props="myProp"></application>
+  </route> -->
+
+  <!-- <application name="@bhecra/navbar"></application> -->
+  <div id="single-spa-application:@bhecra/angular-mf"></div>
+
+  <div style="height: 100px">
+    <route path="settings">
+      <application name="@bhecra/mf1"></application>
+    </route>
+  </div>
+
+  <main>
+    <route default>
+      <application name="@single-spa/welcome"></application>
+    </route>
+  </main>
+
+  <footer>Footer</footer>
+</single-spa-router>
